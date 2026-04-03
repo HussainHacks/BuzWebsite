@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure communication channel — Contact Jr. Technologies for software, innovation, and systems engineering inquiries.">
+  <title>Jr. Technologies | Mission Contact Protocol</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Canvas & Ambient Grid -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <!-- Ambient Side Logs -->
+  <div class="side-log left-log" id="left-log" aria-hidden="true"></div>
+  <div class="side-log right-log" id="right-log" aria-hidden="true"></div>
+
+  <!-- CRT Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" aria-hidden="true">
+    <div class="sweep"></div>
+    <span class="transition-text">SYSTEM SWITCHING...</span>
+  </div>
+
+  <!-- Live Feed Ticker -->
+  <div class="live-ticker" aria-hidden="true">
+    <span class="ticker-badge">SECURE</span>
+    <span class="ticker-text" id="ticker-text">DATA_TRANSMISSION_CHANNEL_INITIALIZED</span>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Contact Header -->
+    <h1 class="contact-header fade-in-up" id="contact-header">
+      > SECURE_COMMUNICATION_CHANNEL
+    </h1>
+
+    <div class="contact-subtitle fade-in-up">
+      <span id="contact-sub-1"></span><br>
+      <span id="contact-sub-2"></span>
+    </div>
+
+    <!-- Contact Form & Modules Grid -->
+    <div class="contact-layout fade-in-up">
+
+      <!-- Left Modules -->
+      <div class="contact-side-modules left-modules">
+        <!-- Module: Neural Core Status -->
+        <div class="terminal-panel mission-panel mini-module">
+          <div class="panel-header">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="panel-title">NEURAL_CORE_STATUS</span>
+          </div>
+          <div class="panel-body module-body">
+            <div class="module-graphic">
+              <svg viewBox="0 0 100 100" class="neural-svg">
+                 <path d="M50 10 Q20 30 20 60 Q20 90 50 90 Q80 90 80 60 Q80 30 50 10 Z" fill="none" stroke="var(--neon-green)" stroke-width="2" stroke-dasharray="5 5" class="brain-path" />
+                 <circle cx="50" cy="30" r="3" class="node pulse" />
+                 <circle cx="35" cy="50" r="3" class="node pulse" />
+                 <circle cx="65" cy="50" r="3" class="node pulse" />
+                 <line x1="50" y1="30" x2="35" y2="50" stroke="var(--neon-green)" stroke-width="1" opacity="0.5"/>
+                 <line x1="50" y1="30" x2="65" y2="50" stroke="var(--neon-green)" stroke-width="1" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="module-text">
+               <div class="stat-line"><span class="stat-label">NEURAL CORE:</span> <span class="stat-value status-on">OPTIMAL</span></div>
+               <div class="stat-line"><span class="stat-label">SYNAPTIC LOAD:</span> <span class="stat-value">34%</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module: Satellite Orbit HUD -->
+        <div class="terminal-panel mission-panel mini-module">
+          <div class="panel-header">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="panel-title">SATELLITE_ORBIT_HUD</span>
+          </div>
+          <div class="panel-body module-body">
+            <div class="module-graphic">
+               <div class="orbit-container">
+                  <div class="earth-grid"></div>
+                  <div class="orbit-ring"></div>
+               </div>
+            </div>
+            <div class="module-text">
+               <div class="stat-line"><span class="stat-label">SAT-ID:</span> <span class="stat-value">ORION-7</span></div>
+               <div class="stat-line"><span class="stat-label">ALT:</span> <span class="stat-value">412.33 km</span></div>
+               <div class="stat-line"><span class="stat-label">VEL:</span> <span class="stat-value">7.21 km/s</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form Section -->
+      <div class="form-container">
+        
+        <!-- Form -->
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+          <input type="hidden" name="access_key" value="d543909d-c7fd-4fdc-b6e5-e447e334c9d0">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+  
+          <div class="form-group">
+            <label for="name-field">root@jrtech:~$ enter_name:</label>
+            <input type="text" id="name-field" name="name" placeholder="your_name" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="email-field">root@jrtech:~$ enter_email:</label>
+            <input type="email" id="email-field" name="email" placeholder="your_email" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="phone-field">root@jrtech:~$ enter_phone:</label>
+            <input type="tel" id="phone-field" name="phone" placeholder="your_phone" required>
+          </div>
+  
+          <button type="submit" class="submit-btn" id="submit-btn">> TRANSMIT_DATA</button>
+  
+          <div class="form-status" id="form-status" aria-live="polite"></div>
+        </form>
+  
+      </div>
+
+      <!-- Right Modules -->
+      <div class="contact-side-modules right-modules">
+        <!-- Module: Bio Metrics -->
+        <div class="terminal-panel mission-panel mini-module">
+          <div class="panel-header">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="panel-title">BIO_METRICS</span>
+          </div>
+          <div class="panel-body module-body">
+            <div class="module-graphic">
+              <svg viewBox="0 0 100 30" class="ekg-svg">
+                 <polyline points="0,15 20,15 30,5 40,25 50,15 100,15" fill="none" stroke="var(--neon-green)" stroke-width="2" class="ekg-line" />
+              </svg>
+            </div>
+            <div class="module-text">
+               <div class="stat-line"><span class="stat-label">AGENT STATUS:</span> <span class="stat-value status-on">DEPLOYED</span></div>
+               <div class="stat-line"><span class="stat-label">VITALS:</span> <span class="stat-value">STABLE</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back Link -->
+    <a href="index.html" class="back-link fade-in-up" data-transition id="back-to-dashboard">
+      &lt; RETURN_TO_DASHBOARD
+    </a>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

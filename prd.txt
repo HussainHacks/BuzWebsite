@@ -1,0 +1,192 @@
+🚀 ENHANCED BUILD PROMPT (Cyberpunk Terminal Site)
+
+Build a 2-page responsive web app (Intro + Contact) with a high-end cyberpunk hacker portfolio aesthetic. The design must feel like a premium interactive terminal system, similar to elite developer portfolio sites with heavy motion, depth, and polish.
+
+🌐 CORE DESIGN DIRECTION (NON-NEGOTIABLE)
+Visual Identity
+Absolute black background: #000000
+Primary neon green: #00FF41
+Accent neon cyan + red (sparingly, only for alerts/status/errors)
+Everything must glow subtly. No flat UI.
+Typography
+Use: Fira Code, VT323, or Share Tech Mono
+All text must feel like a terminal output
+No serif fonts, no modern UI fonts
+Core Feel
+Think: Matrix + Cybersecurity dashboard + retro arcade OS + elite dev portfolio
+Everything feels like a live system interface, not a website
+⚙️ GLOBAL VISUAL SYSTEM (CRITICAL)
+1. Background Layer (must exist on both pages)
+
+Create a dynamic animated background using ONE of:
+
+Canvas wireframe rotating globe
+Moving grid perspective floor
+Digital HUD radar sweep
+
+It must:
+
+Be subtle (10–25% opacity)
+Stay centered and slowly animated
+Never distract from foreground UI
+2. CRT / Terminal Effects
+
+Add globally:
+
+Scanline overlay (moving top → bottom)
+Light flicker / frame jitter (very subtle)
+Green glow bloom on text
+Occasional glitch shift (only on headings)
+3. UI Depth Rules
+Use layered glow boxes (not flat borders)
+Borders pulse slowly (breathing animation)
+Hover states must feel “electrical” (flicker + glow intensify)
+🧠 PAGE 1 — INTRO / SYSTEM DASHBOARD
+Layout
+
+Centered vertical stack, perfectly aligned like a boot sequence screen.
+
+Hero Section
+Main Title
+
+Jr. Technologies
+
+Must include:
+
+Glitch animation (horizontal RGB split or jitter)
+Neon green glow halo
+Slight typing reveal on load
+Subtitle (terminal style)
+> SOFTWARE | INNOVATION | SYSTEMS_ENGINEERING
+
+Add:
+
+Typewriter animation on load
+Cursor blinking effect
+SYSTEM MODULES (IMPORTANT)
+
+Create 2–3 terminal-style panels:
+
+Example 1:
+> SYSTEM_PROFILE
+STATUS: ONLINE
+UPTIME: 99.98%
+CORE: OPTIMIZED
+SECURITY: ENABLED
+Example 2:
+> NETWORK_STATUS
+LATENCY: STABLE
+PACKETS: FLOWING
+FIREWALL: ACTIVE
+
+Each panel must have:
+
+Green glowing border
+Header bar like a terminal window
+Soft scanline overlay inside panel
+Navigation Button (Critical CTA)
+
+Bottom-centered:
+
+> INITIATE_CONTACT
+
+Must:
+
+Glow strongly
+Pulse every 2–3 seconds
+On hover: flicker + slight scale + electric glow burst
+Transition effect: terminal wipe or scanline sweep
+📡 PAGE 2 — CONTACT INTERFACE
+Layout
+
+Minimal, structured like a secure data entry console.
+
+No clutter. Everything aligned in a single column.
+
+Header
+> SECURE_COMMUNICATION_CHANNEL
+
+Optional subtitle:
+
+Encrypting session...
+Handshake complete.
+FORM DESIGN (IMPORTANT)
+
+Fields:
+
+Name
+Email
+Phone Number
+Input Style Rules:
+Transparent background
+Only bottom neon green border
+No rounded “modern UI” look
+Text glows slightly when typing
+Cursor must be visible (terminal style)
+Focus state triggers glow pulse
+Labels (must look like system prompts):
+root@jrtech:~$ enter_name:
+root@jrtech:~$ enter_email:
+root@jrtech:~$ enter_phone:
+SUBMIT BUTTON
+
+Text:
+> TRANSMIT_DATA
+
+Behavior:
+
+Strong neon green glow
+On hover: scanline sweep across button
+On click: terminal “sending packets...” animation
+
+Then success message:
+
+TRANSMISSION COMPLETE
+FORM INTEGRATION (MANDATORY)
+
+Use one:
+
+Formspree OR
+Web3Forms OR
+EmailJS
+
+Include placeholders:
+
+FORM_ENDPOINT = "YOUR_ENDPOINT_HERE"
+PUBLIC_KEY = "YOUR_PUBLIC_KEY"
+
+Ensure:
+
+No backend required
+Works on Netlify deployment
+🔁 PAGE TRANSITION SYSTEM
+
+Between pages:
+
+Instant route OR
+300–600ms terminal wipe animation:
+Horizontal scan sweep
+Screen flicker
+Brief “SYSTEM SWITCHING...” overlay
+💀 POLISH REQUIREMENTS (THIS MAKES IT LOOK PREMIUM)
+
+To match high-end cyberpunk portfolio sites:
+
+Smooth easing everywhere (no linear motion)
+Micro-interactions on every hover
+Subtle parallax between background + UI
+Consistent spacing grid (8px system)
+No random colors outside palette
+No default HTML styles visible anywhere
+Everything must feel handcrafted, not template-generated
+🧩 DEPLOYMENT READY
+Must be static-site compatible
+Must run on Netlify via GitHub push
+No server dependency
+Clean folder structure:
+/index.html
+/contact.html
+/styles.css
+/script.js
+
+reference: https://mrhussain.netlify.app/   #home page only

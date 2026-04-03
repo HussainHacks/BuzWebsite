@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jr. Technologies — Software, Innovation & Systems Engineering. A cyberpunk terminal portfolio experience.">
+  <title>Jr. Technologies | Mission Control</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Canvas & Ambient Grid -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <!-- Ambient Side Logs -->
+  <div class="side-log left-log" id="left-log" aria-hidden="true"></div>
+  <div class="side-log right-log" id="right-log" aria-hidden="true"></div>
+
+  <!-- CRT Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" aria-hidden="true">
+    <div class="sweep"></div>
+    <span class="transition-text">SYSTEM SWITCHING...</span>
+  </div>
+
+  <!-- HUD Radar -->
+  <div class="hud-radar" aria-hidden="true">
+    <div class="radar-sweep-cone"></div>
+    <svg class="radar-svg" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="100" class="radar-bg"></circle>
+      <circle cx="100" cy="100" r="75" class="radar-ring"></circle>
+      <circle cx="100" cy="100" r="50" class="radar-ring"></circle>
+      <circle cx="100" cy="100" r="25" class="radar-ring"></circle>
+      <circle cx="100" cy="100" r="4" class="radar-center"></circle>
+    </svg>
+    <div class="radar-blips" id="radar-blips"></div>
+  </div>
+
+  <!-- HUD Top Left Group -->
+  <div class="top-left-hud">
+    <!-- Live Feed Ticker -->
+    <div class="live-ticker" aria-hidden="true">
+      <span class="ticker-badge">LIVE</span>
+      <span class="ticker-text" id="ticker-text"></span>
+    </div>
+
+    <!-- System Boot Sequence -->
+    <div class="boot-sequence fade-in-up" id="boot-sequence">
+      <div class="boot-log" id="boot-log"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero fade-in-up" id="hero-section">
+      <h1 class="glitch" data-text="Jr. Technologies">Jr. Technologies</h1>
+      <p class="typewriter-line" id="subtitle">> SOFTWARE | INNOVATION | SYSTEMS_ENGINEERING</p>
+      <div class="mission-status">
+        <span class="status-label">MISSION_STATUS:</span>
+        <span class="status-value status-active">OPERATIONAL</span>
+      </div>
+    </section>
+
+    <!-- Mission Control Panels -->
+    <div class="mission-panels fade-in-up" id="system-modules">
+
+      <!-- Panel 1: Mission Profile -->
+      <div class="terminal-panel mission-panel">
+        <div class="panel-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="panel-title">MISSION_PROFILE</span>
+        </div>
+        <div class="panel-body">
+          <div class="stat-line">
+            <span class="stat-label">OBJECTIVE</span>
+            <span class="stat-value">INNOVATE</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">PRIORITY</span>
+            <span class="stat-value priority-critical">CRITICAL</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">STATUS</span>
+            <span class="stat-value status-on">ACTIVE</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">UPTIME</span>
+            <span class="stat-value">99.98%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Tactical Systems -->
+      <div class="terminal-panel mission-panel">
+        <div class="panel-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="panel-title">TACTICAL_SYSTEMS</span>
+        </div>
+        <div class="panel-body">
+          <div class="stat-line">
+            <span class="stat-label">TARGETING</span>
+            <span class="stat-value status-on">LOCKED</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">DEFENSE</span>
+            <span class="stat-value status-on">ENABLED</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">PAYLOAD</span>
+            <span class="stat-value">PRIMED</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">VECTOR</span>
+            <span class="stat-value">OPTIMAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Signal Intelligence -->
+      <div class="terminal-panel mission-panel">
+        <div class="panel-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="panel-title">SIGINT_FEED</span>
+        </div>
+        <div class="panel-body">
+          <div class="stat-line">
+            <span class="stat-label">BANDWIDTH</span>
+            <span class="stat-value">MAXIMUM</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">NODES</span>
+            <span class="stat-value counter" data-target="742">0</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">THROUGHPUT</span>
+            <span class="stat-value counter" data-target="998">0</span>
+            <span class="unit">Mbps</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">ENCRYPTION</span>
+            <span class="stat-value status-on">ACTIVE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 4: Environmental Scan -->
+      <div class="terminal-panel mission-panel">
+        <div class="panel-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="panel-title">ENV_SCAN</span>
+        </div>
+        <div class="panel-body">
+          <div class="stat-line">
+            <span class="stat-label">THREATS</span>
+            <span class="stat-value threat-none">NONE</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">ANOMALIES</span>
+            <span class="stat-value">NEGATIVE</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">COVERAGE</span>
+            <span class="stat-value">GLOBAL</span>
+          </div>
+          <div class="stat-line">
+            <span class="stat-label">SIGNATURE</span>
+            <span class="stat-value">VERIFIED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 5: Custom Callout -->
+      <div class="terminal-panel mission-panel custom-callout-panel">
+        <div class="panel-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="panel-title">SYSTEM_UPGRADE</span>
+        </div>
+        <div class="panel-body custom-callout-body">
+          > Want your own custom website <span class="blink-cursor">?</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Data Stream Visualization -->
+    <div class="data-stream fade-in-up" id="data-stream">
+      <div class="stream-header">> LIVE_DATA_STREAM</div>
+      <div class="stream-content" id="stream-content"></div>
+    </div>
+
+    <!-- CTA Button -->
+    <a href="contact.html" class="cta-btn fade-in-up" data-transition id="initiate-contact">
+      <span class="cta-text-default">> CONTACT JR.</span>
+      <span class="cta-text-hover">> INITIATE CONTACT</span>
+    </a>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
